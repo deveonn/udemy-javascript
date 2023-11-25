@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Usando Objeto Math</title>
+  </head>
+  <body>
+    <h1>Seu número é <span id="numero-titulo">0</span></h1>
+    <p>Raiz Quadrada: <span id="numero-raiz"></span></p>
+    <p>O número é inteiro? <span id="numero-inteiro"></span></p>
+    <p>É NaN? <span id="numero-nan"></span></p>
+    <p>Arredondado pra cima: <span id="numero-cima"></span></p>
+    <p>Arredondado pra baixo: <span id="numero-baixo"></span></p>
+    <p>Com duas casas decimais: <span id="numero-decimal"></span></p>
+
+    <script>
+      const getNumber = Number(prompt("Digite um número"));
+
+      const titulo = document.getElementById('numero-titulo')
+      const raizQuadrada = document.getElementById('numero-raiz')
+      const inteiro = document.getElementById('numero-inteiro')
+      const naoNumero = document.getElementById('numero-nan')
+      const arreCima = document.getElementById('numero-cima')
+      const arreBaixo = document.getElementById('numero-baixo')
+      const comDecimal = document.getElementById('numero-decimal')
+
+      titulo.innerHTML = getNumber
+      raizQuadrada.innerHTML = `${getNumber ** 0.5}`
+      inteiro.innerHTML = `${Number.isInteger(getNumber)}`
+      naoNumero.innerHTML = `${Number.isNaN(getNumber)}` 
+      arreCima.innerHTML = `${Math.ceil(getNumber)}`
+      arreBaixo.innerHTML = `${Math.floor(getNumber)}`
+      comDecimal.innerHTML = `${getNumber.toFixed(2)}`
+    </script>
+  </body>
+</html>

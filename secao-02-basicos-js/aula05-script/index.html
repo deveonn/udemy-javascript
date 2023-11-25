@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Teste ...</title>
+    <style>
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: #444;
+            color: aqua;
+        }
+
+        main {
+            width: 500px;
+            margin: auto;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #222;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Testando ...</h1>
+        <p>Check console(devTools)</p>
+    </main>
+
+    <script>
+        console.log('Testando ...')
+    </script>
+    <script src="externo.js"></script>
+</body>
+
+</html>
+
+<!-- 
+    * Podemos botar a tag <script> dentro do head ou do body
+        * Se botarmos no head do html, ele irá retardar o carregamento da pagina
+        * Uma boa prática de javascript, é botar o script dentro do body, no fim dessa tag.
+
+    * É interessante que separemos as responsabilidades da nossa aplicação, para que fique mais claro o nosso código ...
+        * Separar por arquivos e apenas importa-los para a aplicação!
+    
+    * Uma observação da aula é que, o método alert() só funciona no navegador, se tentarmos rodar 
+    um script na extensão do VS Code, não vai funcionar, pois o VS Code usa o node, o método alert 
+    não funciona dentro do node !!!!!
+ -->

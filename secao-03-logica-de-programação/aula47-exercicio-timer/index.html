@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+    <style>
+        * {font-family: sans-serif;}
+        body {background-color: aqua;}
+
+        .main {
+            border: 1px solid black;
+            border-radius: 1rem;
+            background-color: #FFF;
+            max-width: 600px;
+            margin: auto;
+            margin-top: 3rem;
+            padding: 2rem;
+        }
+
+        #timer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 3rem;
+        }
+
+        h1 {
+            width: 100%;
+            text-align: center;
+        }
+
+        .buttons {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        button {
+            border: 1px solid gray;
+            background-color: grey;
+            padding: 1rem 2rem;
+            border-radius: 1rem;
+            color:#fff;
+            cursor: pointer;
+            transition: 0.5s ease-in;
+        }
+
+        button:hover  {
+            background-color: #FFF;
+            color: black;
+            border: 1px solid black;
+        }   
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <h1>Meu Timer</h1>
+        <div>
+            <div id="timer">
+                <p id="hours">00</p>
+                :
+                <p id="minutes">00</p>
+                :
+                <p id="seconds">00</p>
+            </div>
+        </div>
+
+        
+        <div class="buttons">
+            <button onclick="handleStartTimer()">Start</button>
+            <button onclick="handleStopTimer()">Stop</button>
+            <button onclick="handleResetTimer()">Reset</button>
+        </div>
+    </div>
+
+    <script>
+        // const timer =  document.querySelector("#timer")
+        let seconds = document.querySelector("#seconds")
+        let minutes = document.querySelector("#minutes")
+        let hours = document.querySelector("#hours")
+
+        let incrementSeconds = 55
+        let incrementMinutes = 0
+        let incrementHours = 0
+
+ 
+        function startTimer() {
+            seconds.innerText = `${incrementSeconds += 1}`.padStart(2, "0")
+            if(incrementSeconds >= 59) {
+                incrementSeconds = 0
+                minutes.innerText = `${incrementMinutes += 1}`.padStart(2, "0")
+            }
+        }
+
+        function handleStartTimer() {
+            var timer = setInterval(startTimer, 1000)
+        }
+
+        function handleStopTimer() { 
+            setTimeout(function() {
+                clearInterval(timer)
+            }, 1000)
+        }
+
+        function handleResetTimer() {}
+
+        // não consegui fazer funcionar, conferir o código que o professor passou!
+    </script>
+</body>
+
+</html>

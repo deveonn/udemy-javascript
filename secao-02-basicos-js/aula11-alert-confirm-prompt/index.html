@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert, prompte Confirm</title>
+    <style>
+        * {
+            font-family: sans-serif;
+        }
+        body{
+            background-color: turquoise;
+        }
+
+        div {
+            background-color: aliceblue;
+            width: 60%;
+            margin: auto;
+            border: 1px solid black;
+            border-radius: 30px;
+            padding: 10px;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Teste de Prompt, Alert, e Confirm</h1>
+        <h2>Alert</h2>
+        <p>Apenas uma caixa de alerta para gerar algum aviso, não retorna nada.</p>
+        <h2>Confirm</h2>
+        <p>Diferente de alert, pode retornar True ou false.</p>
+        <h2>Prompt</h2>
+        <p>Consegue retornar o que o usuário escreve no campo input que aparece.</p>
+        <h2>Exemplo de retorno dessas caixas de alerta:</h2>
+        <h3>No Cofirm você:</h3>
+        <p id="print"></p>
+        <h3>No prompt escreveu:</h3>
+        <p id="escreveu"> Não escreveu nada =(</p>
+        <h2>Lembre-se ...</h2>
+        <p>Estas caixas de alerta sempre retornam strings, mesmo quando usamos numeros.</p>
+        <p><mark>Se precisar trabalhar com valores numéricos use <code>Number()</code> ou <code>parseInt()</code> ou<code>parseFloat()</code></mark></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
