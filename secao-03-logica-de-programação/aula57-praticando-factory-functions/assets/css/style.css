@@ -70,9 +70,11 @@ form button:hover {
 }
 
 .calcButton {
-  background-color: gray;
+  background-color:#70757A;
   text-align: center;
   width: 100px;
+  border-radius: 0.5rem;
+  cursor: pointer;
 }
 
 #calcInput {
